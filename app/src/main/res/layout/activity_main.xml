@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar_main"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<LinearLayout
+		android:id="@+id/ll_main_testdiv"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="12dp">
+
+        <TextView
+            android:id="@+id/tv_main_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:text="Result..."
+            android:maxLines="10"
+            android:selectable="true"
+            android:textColor="@color/colorPrimary"/>
+
+		<EditText
+			android:id="@+id/et_main_testtxt"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/main_ethint_text"
+            android:maxLines="4"/>
+
+		<EditText
+			android:id="@+id/et_main_testregex"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/main_ethint_regex"
+            android:maxLines="4"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<Button
+				android:id="@+id/btn_main_match"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:text="@string/main_btn_match"
+				android:textAllCaps="false"
+				android:maxLines="1"/>
+
+			<Button
+				android:id="@+id/btn_main_search"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_toRightOf="@id/btn_main_match"
+				android:text="@string/main_btn_search"
+				android:textAllCaps="false"
+				android:maxLines="1"/>
+
+			<Button
+				android:id="@+id/btn_main_split"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_toRightOf="@id/btn_main_search"
+				android:text="@string/main_btn_split"
+				android:textAllCaps="false"
+				android:maxLines="1"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RegTest</string>
+    
+    <string name="main_ethint_text">Test String...</string>
+    <string name="main_ethint_regex">Test Regex...</string>
+    <string name="main_btn_match">Match</string>
+    <string name="main_btn_search">Search</string>
+    <string name="main_btn_split">Split</string>
+</resources>
