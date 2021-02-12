@@ -33,6 +33,9 @@
 
 		</activity>
 
+		<activity
+			android:name=".ui.activity.TestActivity"/>
+
 		<meta-data
 			android:name="android.max_aspect"
 			android:value="4.0"/>

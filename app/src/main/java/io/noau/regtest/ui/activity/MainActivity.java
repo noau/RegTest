@@ -1,19 +1,19 @@
 package io.noau.regtest.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import io.noau.regtest.R;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.EditText;
-import android.view.View;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-import android.widget.Toast;
 import io.noau.regtest.util.StringUtils;
-import android.text.method.MovementMethod;
-import android.text.method.ScrollingMovementMethod;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +31,18 @@ public class MainActivity extends AppCompatActivity {
         final Button splitButton = findViewById(R.id.btn_main_split);
 
         toolbar.setTitle(R.string.app_name);
+        toolbar.inflateMenu(R.menu.menu_main_toolbar);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.menu_main_toolbar_test:
+                        startActivity(new Intent(MainActivity.this, TestActivity.class));
+                        break;
+                }
+                return true;
+            }
+        });
         resultTv.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         matchButton.setOnClickListener(new View.OnClickListener() {

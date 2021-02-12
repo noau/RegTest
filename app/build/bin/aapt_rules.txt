@@ -105,3 +105,6 @@
 # view AndroidManifest.xml #generated:19
 -keep class io.noau.regtest.ui.activity.MainActivity { <init>(...); }
 
+# view AndroidManifest.xml #generated:28
+-keep class io.noau.regtest.ui.activity.TestActivity { <init>(...); }
+
